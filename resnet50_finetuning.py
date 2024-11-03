@@ -32,8 +32,8 @@ print(base_model.summary())
 from tensorflow.keras.datasets import cifar100
 (x_train, y_train), (x_test, y_test) = cifar100.load_data()
 
-x_train = x_train / 255.0
-x_test = x_test / 255.0
+x_train = preprocess_input(x_train/255.0)
+x_test = preprocess_input(x_test/255.0)
 
 y_train = to_categorical(y_train)
 
