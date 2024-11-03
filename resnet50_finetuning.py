@@ -14,10 +14,10 @@ def create_model():
     model.add(base_model)
     model.add(Flatten())
     model.add(BatchNormalization())
-    model.add(Dense(512, activation='relu'))
+    model.add(Dense(128, activation='relu'))
     model.add(Dropout(0.5))
     model.add(BatchNormalization())
-    model.add(Dense(256, activation='relu'))
+    model.add(Dense(128, activation='relu'))
     model.add(Dropout(0.5))
     model.add(BatchNormalization())
     model.add(Dense(100, activation='softmax'))
@@ -32,8 +32,8 @@ print(base_model.summary())
 from tensorflow.keras.datasets import cifar100
 (x_train, y_train), (x_test, y_test) = cifar100.load_data()
 
-x_train = preprocess_input(x_train/255.0)
-x_test = preprocess_input(x_test/255.0)
+x_train = preprocess_input(x_train)
+x_test = preprocess_input(x_test)
 
 y_train = to_categorical(y_train)
 
