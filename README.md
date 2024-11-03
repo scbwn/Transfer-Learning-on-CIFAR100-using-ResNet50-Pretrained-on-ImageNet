@@ -15,7 +15,7 @@ This project demonstrates the application of transfer learning on the CIFAR100 d
 - Dataset: CIFAR100 (60,000 32x32 color images)
 - Pretrained Model: ResNet50 on ImageNet
 - Fine-tuning: Preprocess input, batch normalization, and dropout
-- Optimization: Adam optimizer
+- Optimization: Adam optimizer with small learning rate
 
 ## Requirements
 
